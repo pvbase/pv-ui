@@ -8,16 +8,10 @@
         align-items: center;
         width: 100%;
         justify-content: center;
-        .register-form{
+        .login-form{
             width: 60%;
-            .ant-form-item-label{
-                text-align: left;
-            }
-            .register-btn{
-                color: #fff;
-                background: #78028c;
-                border-radius: 5px;
-            }
+           
+         
         }
     }
 }
@@ -30,4 +24,15 @@
 }
 .content{
     width: 100%;
+    height: calc(100vh - 150px);
+    border: 7px solid #78028c;
+}
+.primary-btn{
+    color: #fff;
+    background: #78028c;
+    border-radius: 5px;
+
+  }
+  .ant-form-item-label{
+    text-align: left;
 }
