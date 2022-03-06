@@ -6,6 +6,10 @@ import Home from './modules/home/home';
 import Registration from './modules/registration/registration';
 import Profile from './modules/profile/profile';
 import ProfileTab from './modules/profile/profileTab';
+import Branch from './modules/branch/branch';
+import BranchTab from './modules/branch/branchTab';
+import Department from './modules/department/department';
+import DepartmentTab from './modules/department/departmentTab';
 
 function App() {
   return (
@@ -26,6 +30,18 @@ function App() {
         </Routes>
         <Routes>
         <Route path='/profileTab' element={<ProfileTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/branch' element={<Branch />} />
+        </Routes>
+        <Routes>
+        <Route path='/branchTab' element={<BranchTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/department' element={<Department />} />
+        </Routes>
+        <Routes>
+        <Route path='/departmentTab' element={<DepartmentTab />} />
         </Routes>
       </div>
     </Router>

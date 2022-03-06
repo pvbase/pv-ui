@@ -12,10 +12,10 @@ import LABELS from '../../constants/label';
 import "../../scss/menu.scss"
 
 const { MENUITEMS: {
-  HOME, ORGANIZATION, PROFILE, USERMANAGEMNT, WORKFLOW, MAPPINGS
+  HOME, ORGANIZATION, PROFILE,BRANCH,DEPARTMENT,DESIGNATION,ROLES,PERMISSIONS, USERMANAGEMNT, WORKFLOW, MAPPINGS
 } } = LABELS
 const { SubMenu } = Menu;
-
+debugger
 const MenuItems = () => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate()
@@ -28,9 +28,12 @@ const MenuItems = () => {
     const { key } = e
    if(key === "1") {
     navigate("/home")
-   }
-   else{
-     navigate("/profile")
+   }else if(key === "2"){
+    navigate("/profile")
+   }else if(key === "3"){
+    navigate("/branch")
+   }else if(key === "4"){
+    navigate("/department")
    }
   }
 
@@ -49,6 +52,11 @@ const MenuItems = () => {
           </Menu.Item>
           <SubMenu key="sub1" icon={<MailOutlined />} title={ORGANIZATION}>
             <Menu.Item key="2">{PROFILE}</Menu.Item>
+            <Menu.Item key="3">{BRANCH}</Menu.Item>
+            <Menu.Item key="4">{DEPARTMENT}</Menu.Item>
+            <Menu.Item key="5">{DESIGNATION}</Menu.Item>
+            <Menu.Item key="6">{ROLES}</Menu.Item>
+            <Menu.Item key="7">{PERMISSIONS}</Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<AppstoreOutlined />} title={USERMANAGEMNT}>
           </SubMenu>
