@@ -1,0 +1,53 @@
+.role-tab-wrap{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 150px);
+    border-top: 7px solid #78028c;
+    // justify-content: space-between;
+    .ant-tabs-tab.ant-tabs-tab-active{
+        background: #78028c;
+        // padding: 8px 50px;
+        .ant-tabs-tab-btn{
+        color: #fff;
+        }
+    }
+    .ant-tabs-content{
+      height: 100%;
+    }
+    .ant-tabs-tab-btn{
+     padding: 8px 50px;
+    }
+    .form{
+        display: flex;
+        align-items: center;
+       justify-content: center;
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        .ant-form-item-label{
+            text-align: left;
+        }
+    }
+  .roleTable{
+      width: 85%;
+      margin: 10px;
+  }
+  .menu{
+      width: 15%;
+      .menu-items{
+          height: 100%;
+      }
+  }
+  .primary-btn{
+    color: #fff;
+    background: #78028c;
+    border-radius: 5px;
+
+  }
+  .secondary-btn{
+      color: #78028c;
+      background: #fff;
+      border-radius: 5px;
+
+  }
+}

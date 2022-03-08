@@ -3,39 +3,48 @@ import MenuItems from '../header/menuItems'
 import { useNavigate } from 'react-router-dom'
 
 import { Table, Space, Tag, Button, Row, Col } from 'antd'
-import '../../scss/department.scss'
+import '../../scss/user.scss'
 import LABELS from '../../constants/label'
 
 const {
-  DEPARTMENT: {
-    DEPARTMENT_NAME,
-    BRANCH,
-    PARENTDEP,
-    DEPARTMENT_CODE,
-    DESC,
+  USER: {
+    USER_NAME,
+    USER_EMAIL,
+    DEPARTMENT,
+    DESIGNATION,
+    ROLE,
     STATUS,
-    TAB_BTN,
     ADD_NEW,
     ACTION
   },
 } = LABELS
-const Department = () => {
+const User = () => {
   const navigate = useNavigate()
   const columns = [
     {
-      title: DEPARTMENT_NAME,
-      dataIndex: DEPARTMENT_NAME,
-      key: DEPARTMENT_NAME,
+      title: USER_NAME,
+      dataIndex: USER_NAME,
+      key: USER_NAME,
     },
     {
-      title: DEPARTMENT_CODE,
-      dataIndex: DEPARTMENT_CODE,
-      key: DEPARTMENT_CODE,
+      title: USER_EMAIL,
+      dataIndex: USER_EMAIL,
+      key: USER_EMAIL,
     },
     {
-      title: DESC,
-      dataIndex: DESC,
-      key: DESC,
+      title: DEPARTMENT,
+      dataIndex: DEPARTMENT,
+      key: DEPARTMENT,
+    },
+    {
+      title: DESIGNATION,
+      dataIndex: DESIGNATION,
+      key: DESIGNATION,
+    },
+    {
+      title: ROLE,
+      dataIndex: ROLE,
+      key: ROLE,
     },
     {
       title: STATUS,
@@ -50,21 +59,21 @@ const Department = () => {
   ]
   const data = []
   return (
-    <div className="department-tab-wrap">
+    <div className="user-tab-wrap">
       <div className="menu">
         <MenuItems />
       </div>
       <div className='oneBox'>
         <div>
-          <h1 className="heading">DEPARTMENT</h1>
+          <h1 className="heading">USER</h1>
         </div>
-        <div className="departmentTable">
+        <div className="userTable">
           <Row>
             <Col span={23} style={{ textAlign: 'end', margin: '10px' }}>
               <Button
                 className="primary-btn"
                 onClick={() => {
-                  navigate('/DepartmentTab')
+                  navigate('/UserTab')
                 }}
               >
                 {ADD_NEW}
@@ -77,4 +86,4 @@ const Department = () => {
     </div>
   )
 }
-export default Department
+export default User

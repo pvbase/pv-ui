@@ -10,6 +10,16 @@ import Branch from './modules/branch/branch';
 import BranchTab from './modules/branch/branchTab';
 import Department from './modules/department/department';
 import DepartmentTab from './modules/department/departmentTab';
+import Designation from './modules/designation/designation';
+import DesignationTab from './modules/designation/designationTab';
+import Role from './modules/roles/role';
+import RoleTab from './modules/roles/roleTab';
+import Permission from './modules/permission/permission';
+import PermissionTab from './modules/permission/permissionTab';
+import User from './modules/user/user';
+import UserTab from './modules/user/userTab';
+import Group from './modules/group/group';
+import GroupTab from './modules/group/groupTab';
 
 function App() {
   return (
@@ -42,6 +52,36 @@ function App() {
         </Routes>
         <Routes>
         <Route path='/departmentTab' element={<DepartmentTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/designation' element={<Designation />} />
+        </Routes>
+        <Routes>
+        <Route path='/designationTab' element={<DesignationTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/role' element={<Role />} />
+        </Routes>
+        <Routes>
+        <Route path='/roleTab' element={<RoleTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/permission' element={<Permission />} />
+        </Routes>
+        <Routes>
+        <Route path='/permissionTab' element={<PermissionTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/user' element={<User />} />
+        </Routes>
+        <Routes>
+        <Route path='/userTab' element={<UserTab />} />
+        </Routes>
+        <Routes>
+        <Route path='/group' element={<Group />} />
+        </Routes>
+        <Routes>
+        <Route path='/groupTab' element={<GroupTab />} />
         </Routes>
       </div>
     </Router>

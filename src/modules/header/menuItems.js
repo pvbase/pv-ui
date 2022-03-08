@@ -12,7 +12,7 @@ import LABELS from '../../constants/label';
 import "../../scss/menu.scss"
 
 const { MENUITEMS: {
-  HOME, ORGANIZATION, PROFILE,BRANCH,DEPARTMENT,DESIGNATION,ROLES,PERMISSIONS, USERMANAGEMNT, WORKFLOW, MAPPINGS
+  HOME, ORGANIZATION, PROFILE,BRANCH,DEPARTMENT,DESIGNATION,ROLE,PERMISSION, USERMANAGEMNT,USER,GROUP, WORKFLOW, MAPPINGS
 } } = LABELS
 const { SubMenu } = Menu;
 debugger
@@ -34,7 +34,18 @@ const MenuItems = () => {
     navigate("/branch")
    }else if(key === "4"){
     navigate("/department")
+   }else if(key === "5"){
+    navigate("/designation")
+   }else if(key === "6"){
+    navigate("/role")
+   }else if(key === "7"){
+    navigate("/permission")
+   }else if(key === "8"){
+    navigate("/user")
+   }else if(key === "9"){
+    navigate("/group")
    }
+
   }
 
   return (
@@ -55,10 +66,12 @@ const MenuItems = () => {
             <Menu.Item key="3">{BRANCH}</Menu.Item>
             <Menu.Item key="4">{DEPARTMENT}</Menu.Item>
             <Menu.Item key="5">{DESIGNATION}</Menu.Item>
-            <Menu.Item key="6">{ROLES}</Menu.Item>
-            <Menu.Item key="7">{PERMISSIONS}</Menu.Item>
+            <Menu.Item key="6">{ROLE}</Menu.Item>
+            <Menu.Item key="7">{PERMISSION}</Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<AppstoreOutlined />} title={USERMANAGEMNT}>
+          <Menu.Item key="8">{USER}</Menu.Item>
+          <Menu.Item key="9">{GROUP}</Menu.Item>
           </SubMenu>
           <SubMenu key="sub3" icon={<AppstoreOutlined />} title={WORKFLOW}>
           </SubMenu>
